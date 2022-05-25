@@ -152,7 +152,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CPPLearning.cpp" />
+    <ClCompile Include="HackerRankSolutions.cpp" />
     <ClCompile Include="HackerRank.cpp" />
   </ItemGroup>
   <ItemGroup>
