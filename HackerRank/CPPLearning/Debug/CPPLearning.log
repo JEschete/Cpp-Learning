@@ -1,1 +1,5 @@
-﻿
+﻿  HackerRankSolutions.cpp
+  HackerRank.cpp
+c:\users\jeschete\documents\projects\cpp-learning\hackerrank\cpplearning\hackerrank.cpp(11): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  CPPLearning.vcxproj -> C:\Users\jeschete\Documents\projects\Cpp-Learning\HackerRank\Debug\CPPLearning.exe

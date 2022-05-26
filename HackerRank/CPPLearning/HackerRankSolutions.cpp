@@ -18,12 +18,12 @@ int main()
 	//cout << result << "\n";
 
 	//plusMinus({-4,3,-9,0,4,1});
-	//cout << "\n";
-	//cout << "\n";
 
 	//staircase(150);
+	// miniMaxSum({ 942381765, 627450398, 954173620, 583762094, 236817490 });
 
-	miniMaxSum({ 942381765, 627450398, 954173620, 583762094, 236817490 });
+	int result = birthdayCakeCandles({ 4,4,1,3 });
+	cout << result << "\n";
 
 }
 

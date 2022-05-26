@@ -84,3 +84,15 @@ void miniMaxSum(vector<int> arr) {
 
 
 };
+int birthdayCakeCandles(vector<int> candles) {
+	int tallCandleCount = 0;
+	int maxCandle = *max_element(candles.begin(), candles.end());
+	for (int x : candles) {
+
+		if (x == maxCandle) {
+			tallCandleCount += 1;
+		}
+	}
+	
+	return tallCandleCount;
+}
