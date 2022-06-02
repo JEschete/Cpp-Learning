@@ -95,4 +95,65 @@ int birthdayCakeCandles(vector<int> candles) {
 	}
 	
 	return tallCandleCount;
-}
+};
+vector<int> gradingStudents(vector<int> grades) {
+	vector<int> newGrades; 
+	for (int x : grades) {
+		if (x < 38) {
+			newGrades.push_back(x);
+		}
+		else {
+			switch (x % 5) {
+			case 3:
+				newGrades.push_back(x + 2);
+				break;
+			case 4:
+				newGrades.push_back(x + 1);
+				break;
+			default:
+				newGrades.push_back(x);
+				break;
+			}
+		}
+	}
+	return newGrades;
+};
+void countApplesAndOranges(int s, int t, int a, int b, vector<int> apples, vector<int> oranges) {
+	int appleHit = 0;
+	int orangeHit = 0;
+
+	for (int apple : apples) {
+		int appleCheck = a + apple;
+		if ((s <= appleCheck)&&(appleCheck <= t)) {
+			appleHit += 1;
+		}
+	}
+	for (int orange : oranges) {
+		int orangeCheck = b + orange;
+		if ((s <= orangeCheck) && (orangeCheck <= t)) {
+			orangeHit += 1;
+		}
+	}
+
+	cout << appleHit << "\n";
+	cout << orangeHit << "\n";
+
+};
+string kangaroo(int x1, int v1, int x2, int v2) {
+	float ratio = - ((x1 - x2) / (v1 - v2));
+	float hitPossible = fmod(ratio, 1);
+
+	cout << ratio << "\n";
+	cout << hitPossible << "\n";
+
+	if (hitPossible != 0) {
+		return "NO";
+	}
+	else if(v1 == v2) {
+		return "NO";
+	}
+	else {
+		return "YES";
+	}
+
+};
