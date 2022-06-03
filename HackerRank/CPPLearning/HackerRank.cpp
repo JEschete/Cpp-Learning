@@ -140,20 +140,22 @@ void countApplesAndOranges(int s, int t, int a, int b, vector<int> apples, vecto
 
 };
 string kangaroo(int x1, int v1, int x2, int v2) {
-	float ratio = - ((x1 - x2) / (v1 - v2));
-	float hitPossible = fmod(ratio, 1);
+	/* This problem was more of a math logic problem, you have to first see the kangaroos as points on a line.
+	   use the equations y1 =m1x + b1 and y2 = m2x+b2 and set y1 = y2, solve for x, the result must be a whole number
+	   in order for the problem to be solved. Y ou must also check for negative numbers as the cross can't happen in the past
+	   and you must also check for divide by zero situations aka parallel lines.*/
+	float ratio = ((x1 - x2) % (v2 - v1));
 
-	cout << ratio << "\n";
-	cout << hitPossible << "\n";
-
-	if (hitPossible != 0) {
+	if ((v2 - v1) == 0) {
 		return "NO";
 	}
-	else if(v1 == v2) {
+	else if (((x1 - x2) / (v2 - v1)) < 0) {
 		return "NO";
 	}
-	else {
+	else if (ratio == 0) {
 		return "YES";
 	}
-
-};
+	else {
+		return "NO";
+	}
+}
