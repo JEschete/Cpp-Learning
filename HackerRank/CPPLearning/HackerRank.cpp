@@ -5,6 +5,9 @@
 
 using namespace std;
 
+
+// Given a square matrix, calculate the absolute difference between the sums of its diagonals.
+// https://www.hackerrank.com/challenges/diagonal-difference/problem?isFullScreen=true
 int diagonalDifference(vector<vector<int>> arr) {
 	int a = 0;
 	int b = 0;
@@ -18,6 +21,10 @@ int diagonalDifference(vector<vector<int>> arr) {
 
 	return abs(a - b);
 };
+
+// Given an array of integers, calculate the ratios of its elements that are positive, negative, and zero. 
+// Print the decimal value of each fraction on a new line with  places after the decimal.
+// https://www.hackerrank.com/challenges/plus-minus/problem?isFullScreen=true
 void plusMinus(vector<int> arr) {
 	float pos = 0;
 	float neg = 0;
@@ -43,6 +50,9 @@ void plusMinus(vector<int> arr) {
 	cout << setprecision(6) << fixed << neg << " \n";
 	cout << setprecision(6) << fixed << zero << " \n";
 };
+
+// Write a program that prints a staircase of size n. 
+// https://www.hackerrank.com/challenges/staircase/problem?isFullScreen=true
 void staircase(int n) {
 	int spaces = n - 1;
 	int staircase = n - (n - 1);
@@ -65,6 +75,10 @@ void staircase(int n) {
 	}
 
 };
+
+// Given five positive integers, find the minimum and maximum values that can be calculated by summing exactly four of the five integers. 
+// Then print the respective minimum and maximum values as a single line of two space-separated long integers.  
+// https://www.hackerrank.com/challenges/mini-max-sum/problem?isFullScreen=true
 void miniMaxSum(vector<int> arr) {
 
 	vector<int> minArr(arr.begin(), arr.end());
@@ -84,6 +98,9 @@ void miniMaxSum(vector<int> arr) {
 
 
 };
+
+// Given an array of "candle heights" find the maximum height and track how many times it occurs in the array. 
+// https://www.hackerrank.com/challenges/birthday-cake-candles/problem?isFullScreen=true
 int birthdayCakeCandles(vector<int> candles) {
 	int tallCandleCount = 0;
 	int maxCandle = *max_element(candles.begin(), candles.end());
@@ -96,6 +113,9 @@ int birthdayCakeCandles(vector<int> candles) {
 	
 	return tallCandleCount;
 };
+
+// Round the grades given the provided criteria. 
+// https://www.hackerrank.com/challenges/grading/problem?isFullScreen=true
 vector<int> gradingStudents(vector<int> grades) {
 	vector<int> newGrades; 
 	for (int x : grades) {
@@ -118,6 +138,9 @@ vector<int> gradingStudents(vector<int> grades) {
 	}
 	return newGrades;
 };
+
+// Track how many of each type of object will land in the area prescribed. 
+// https://www.hackerrank.com/challenges/apple-and-orange/problem?isFullScreen=true
 void countApplesAndOranges(int s, int t, int a, int b, vector<int> apples, vector<int> oranges) {
 	int appleHit = 0;
 	int orangeHit = 0;
@@ -139,6 +162,9 @@ void countApplesAndOranges(int s, int t, int a, int b, vector<int> apples, vecto
 	cout << orangeHit << "\n";
 
 };
+
+// Write an algorithm that determines if two objects, given each a starting position and velocity, will ever collide. 
+// https://www.hackerrank.com/challenges/kangaroo/problem?isFullScreen=true
 string kangaroo(int x1, int v1, int x2, int v2) {
 	/* This problem was more of a math logic problem, you have to first see the kangaroos as points on a line.
 	   use the equations y1 =m1x + b1 and y2 = m2x+b2 and set y1 = y2, solve for x, the result must be a whole number
