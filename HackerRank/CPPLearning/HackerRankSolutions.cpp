@@ -1,5 +1,6 @@
 // CPPLearning.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+
+// This doucment is to test the solutions that are defined in the HackerRank.cpp file.  
 
 #include <iostream>
 #include <string>
