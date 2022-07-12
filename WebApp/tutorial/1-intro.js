@@ -1,3 +1,5 @@
+// Tutorial Video @ https://youtu.be/Oe421EPjeBE
+
 const amount = 12
 
 if (amount < 10){

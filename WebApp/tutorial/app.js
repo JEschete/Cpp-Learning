@@ -1,22 +1,21 @@
-const http = require('http');
+// npm - global command, comes with node
+// npm --version
 
-//req is the request from the browser, res is the response to send data back. 
-const server = http.createServer((req,res)=>{
-    if(req.url === '/'){
-        res.end(
-            `<h1>Welcome to the Jungle, Weve got fun and games</h>
-            <p><a href="/about">About Us</a></p>
-            <p><a href="/contacts">Contact Us</a></p>`)
-    }
-    if(req.url === '/about'){
-        res.end('We have everything you want')
-    }
-    res.end(
-        `<h1>Oops</h1>
-        <p>Seems we don't have that...</p>
-        <a href="/"> Where do we go now?</a>
-        `
-    )
-})
+// local dependancy - use it only in a particular project
+// npm i <packageName>  
 
-server.listen(5000)
+// global dependancy - use it in any project
+// npm install -g <packageName>
+// sudo install -g <packageName> (mac)
+
+// package.json - manifest file (stores important info about project/package)
+// manual approach (create package.json in the root, create properties etc) 
+// npm init (step by step, press enter to skip)
+// nom init -y (everything default)
+
+
+const _ = require('lodash');
+
+const items = [1,[2,[3,[4]]]]
+const newItems = _.flattenDeep(items);
+console.log(newItems)
